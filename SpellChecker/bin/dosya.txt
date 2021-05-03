@@ -1,0 +1,67 @@
+	private void ignoreAllAction() {
+		for ( int i = 0; i < wrongWords.size(); i++ ) {
+			WrongWordResponse word = wrongWords.get(i);
+			int start = word.getBeginIndex();
+			int end = word.getEndIndex();
+			ArrayList<String> correctForms = word.getPossibleCorrectForms();
+			int indexInArray = i;
+			String wrongForm = word.getWrongForm();
+			StyledDocument doc = textPane.getStyledDocument();
+
+			// Get wrong form and replace it with current text to delete highlight
+			String newWord = wrongForm;
+
+			//Replace the old text with the new one:
+			try {
+				doc.remove(start, end - start);
+				doc.insertString(start, newWord, null);
+			} catch (BadLocationException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+			// Delete WrongWordResponse object from arrayList
+			wrongWords.remove( indexInArray);
+			
+			//Prepare caret position, so the user can keep on writing:
+			textPane.setCaretPosition(start + newWord.length());
+		}
+	}	
+	private void correctAllAction() throws BadLocationException {
+
+		for ( int i = 0; i < wrongWords.size(); i++ ) {
+			WrongWordResponse word = wrongWords.get(i);
+			int start = word.getBeginIndex();
+			int end = word.getEndIndex();
+			ArrayList<String> correctForms = word.getPossibleCorrectForms();
+			int indexInArray = i;
+			String wrongForm = word.getWrongForm();
+			StyledDocument doc = textPane.getStyledDocument();
+			
+			 //Get the text of that button (it is going to be the new word):
+			 String newWord = correctForms.get(0);
+            
+			 //Replace the old text with the new one:
+			 doc.remove(start, end - start);
+			 doc.insertString(start, newWord, null);
+			 
+			 // Delete WrongWordResponse object from arrayList
+			 wrongWords.remove( indexInArray);
+			 updateIndexOfWrongWords(newWord.length() - wrongForm.length(), start); // We also should update ındex of other wrong words our text can grow longer so their index change
+			 
+			 //Prepare caret position, so the user can keep on writing:
+			 textPane.setCaretPosition(start + newWord.length());
+		}
+		
+	}
+	private void updateIndexOfWrongWords( int change, int start) {
+		
+        for ( int i = 0; i < wrongWords.size(); i++ ) {
+            WrongWordResponse word = wrongWords.get(i);
+            
+            if ( word.getBeginIndex() >= start  ) {
+                word.setBeginIndex(word.getBeginIndex() + change);
+                word.setEndIndex(word.getEndIndex() + change);
+            }
+        }
+    }
