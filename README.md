@@ -1,4 +1,6 @@
 # SpellChecker-Project
+It is simple spellChecker that will provide user with some possible words for wrong forms and some little features for user.
+
 
 We did this project for cs102
 Our team consist of 5 people. 2 of us contribute enough. One of my friend did the part to find wrong words and their true forms. I did almost all of the other parts ( mainly gui parts).
