@@ -3,7 +3,7 @@ It is simple spellChecker that will provide user with some possible words for wr
 
 
 We did this project for cs102
-Our team consist of 5 people. 2 of us contribute enough. One of my friend did the part to find wrong words and their true forms. I did almost all of the other parts ( mainly gui parts).
+Our team consist of 5 people. Me and one of my friend did most of the project. One of my friend did the part to find wrong words and their true forms. I did almost all of the other parts ( mainly gui parts).
 The author of each code file is written at the top.
 
 in SpellChecker-Project/SpellChecker/src/View/freeWritingMode.java / 
