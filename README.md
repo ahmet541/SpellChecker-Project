@@ -13,4 +13,6 @@ so there will be small lag because of process
 
 
 ![image](https://user-images.githubusercontent.com/73609846/154993447-66ec9e6d-abcc-4f7e-9560-ec86a7b6d7ce.png)
-![image](https://user-images.githubusercontent.com/73609846/154993777-e9e55e45-726e-40a8-ac3f-e91b51ccdff1.png)
+![image](https://user-images.githubusercontent.com/73609846/154994090-058a3a29-000e-40e7-8b49-999ff15da88c.png)
+![image](https://user-images.githubusercontent.com/73609846/154994012-6ce47672-0c82-4828-8a3e-dde7548abeb3.png)
+
