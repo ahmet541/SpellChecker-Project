@@ -4,7 +4,7 @@ It is simple spellChecker that will provide user with some possible words for wr
 You can download SpellChecker folder and run .exe to start application. 
 
 We did this project for cs102
-Our team consist of 5 people. Me and one of my friend did most of the project. One of my friend did the part to find wrong words and their true forms. I did almost all of the other parts ( mainly gui parts).
+Our team consists of 5 people. One of my friend did the part to find the wrong words and their true forms. I did almost all of the other parts ( mainly GUI parts).
 The author of each code file is written at the top.
 
 
